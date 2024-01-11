@@ -1,0 +1,82 @@
+[
+  {
+      "marca": "Nike Jordan",
+      "precio": 120,
+      "tipo": "Casual",
+      "imagen": "https://imgs.search.brave.com/yqni0oFRlEIx2ynJrCS9nwBFNy1Jom7mXdE-Xo6Kn9M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jYWx6/ZXRvbmlhLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMC8x/Mi9kYTMxMDU4Zi5q/cGc",
+      "fabricacion": {
+          "año": 2022,
+          "lugar": "China"
+      }
+  },
+  {
+      "marca": "Joma",
+      "precio": 90.0,
+      "tipo": "Trail Running",
+      "imagen": "https://www.tradeinn.com/f/13897/138972522/joma-zapatillas-trail-running-rase.jpg",
+      "fabricacion": {
+          "año": 2023,
+          "lugar": "España"
+      }
+  },
+  {
+      "marca": "Vans",
+      "precio": 70,
+      "tipo": "Casual",
+      "imagen": "https://imgs.search.brave.com/J7X9kYkbadKUfsEMrAoyzoKDThU8kR13ir08L0idmCc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2YwLzgz/L2ZkL2YwODNmZDhi/Yzg3YjM1YmEwMjlj/N2FhNGJmMTcxMGUz/LmpwZw",
+      "fabricacion": {
+          "año": 2021,
+          "lugar": "Indonesia"
+      }
+  },
+  {
+      "marca": "New Balance",
+      "precio": 100.0,
+      "tipo": "Running",
+      "imagen": "https://imgs.search.brave.com/uGUpTafDiLAPEQkVXLPPQvdw9LoyEiljbpKSrof_vII/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Y2LzM4/LzM1L2Y2MzgzNTE3/ZjViMzcwYTY3OTU4/YjQ0ZjI4MjAyNWRl/LmpwZw",
+      "fabricacion": {
+          "lugar": "Estados Unidos"
+      }
+  },
+  {
+      "marca": "Hoka",
+      "precio": "Caro",
+      "tipo": "Running",
+      "imagen": "https://imgs.search.brave.com/0ZoqCJ44qBTpNUWAu1gsTLPcjfITJ5BNxRYcAPr-LMM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy96YXBh/dGlsbGEtcnVubmlu/Zy1ob2thLW9uZS1v/bmUtcmluY29uLTMt/Y29waWEtMTYyOTE5/ODM3My5qcGc_cmVz/aXplPTk4MDoq",
+      "fabricacion": {
+          "año": 2021,
+          "lugar": "Estados Unidos"
+      }
+  },
+  {
+      "marca": "Nike",
+      "precio": 90.0,
+      "tipo": "Casual",
+      "imagen": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/2eff461f-f3ac-4285-9c6a-2f22173aac42/custom-nike-air-force-1-low-by-you.png",
+      "fabricacion": {
+          "año": 2022,
+          "lugar": "Vietnam"
+      }
+  },
+  {
+      "marca": "Salomon",
+      "precio": 150.0,
+      "tipo": "Senderismo",
+      "imagen": "https://deportesmoya.es/114377-large_default/zapatillas-trekking-salomon-x-ultra-4-gtx-blanco-hombre.jpg",
+      "fabricacion": {
+          "lugar": "Francia"
+      }
+  },
+  {
+      "marca": "New Balance",
+      "precio": 80.0,
+      "tipo": "Casual",
+      "imagen": "https://urbanstyleferrol.es/uploads/photo/image/2991/A00907_1hFvtKgi.JPG",
+      "fabricacion": {
+          "año": 2022,
+          "lugar": "Estados Unidos"
+      }
+  }
+
+
+]

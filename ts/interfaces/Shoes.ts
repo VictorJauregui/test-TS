@@ -1,6 +1,6 @@
 export interface Shoe {
     marca: string;
-    precio: number;
+    precio: boolean;
     tipo: string;
     imagen: string;
     fabricacion: Fabrication;

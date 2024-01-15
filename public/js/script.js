@@ -8,16 +8,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const shoes_container = document.querySelector("#shoes_container");
+function fetchJson(url) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return yield response.json();
+    });
+}
 function allShoes() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield fetch("../shoes.json");
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+            const shoes = yield fetchJson("../shoes.json");
+            if (!shoes || shoes.length === 0) {
+                throw new Error(`HTTP error! status: ${shoes}`);
             }
-            const data = yield response.json();
+            const data = shoes;
             data.forEach((element) => {
-                console.log(element);
                 const containerShoe = document.createElement("div");
                 const imageShoe = document.createElement("img");
                 const brandShoe = document.createElement("p");
@@ -27,7 +35,12 @@ function allShoes() {
                 const placeFabrication = document.createElement("p");
                 imageShoe.src = element.imagen;
                 brandShoe.innerHTML = element.marca;
-                priceShoe.innerHTML = element.precio + "€";
+                if (typeof element.precio === "boolean") {
+                    priceShoe.innerHTML = element.precio ? "Sí" : "No";
+                }
+                else {
+                    throw new Error(`HTTP error! status: ${element.precio}. Price is not a boolean`);
+                }
                 typeShoe.innerHTML = element.tipo;
                 if (element.fabricacion.año !== undefined) {
                     yearFabrication.innerHTML = element.fabricacion.año.toString();

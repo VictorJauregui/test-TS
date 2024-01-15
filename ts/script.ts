@@ -1,15 +1,23 @@
 const shoes_container = document.querySelector("#shoes_container");
 import { Shoe } from "./interfaces/Shoes";
 
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return await response.json() as Promise<T>;
+}
+
 async function allShoes() {
   try {
-      const response = await fetch("../shoes.json");
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const shoes: Shoe[] = await fetchJson<Shoe[]>("../shoes.json");
+      if (!shoes || shoes.length === 0) {
+        throw new Error(`HTTP error! status: ${shoes}`);
       }
-      const data = await response.json();
+      const data = shoes;
       data.forEach((element:Shoe) => {
-        console.log(element)
+        // console.log(element)
           const containerShoe:HTMLDivElement = document.createElement("div");
           const imageShoe:HTMLImageElement = document.createElement("img");
           const brandShoe:HTMLParagraphElement = document.createElement("p");
@@ -20,7 +28,13 @@ async function allShoes() {
 
           imageShoe.src = element.imagen;
           brandShoe.innerHTML = element.marca;
-          priceShoe.innerHTML = element.precio + "€";
+          // check the price if is a boolean as the interface says
+          // Runtime Errors: Remember that TypeScript interfaces only provide compile-time type checking. They don't validate the structure of the JSON at runtime. If the JSON structure doesn't match the Shoe interface, the code will compile but could fail at runtime. 
+          if (typeof element.precio === "boolean") {
+            priceShoe.innerHTML = element.precio ? "Sí" : "No";
+          } else {
+            throw new Error(`HTTP error! status: ${element.precio}. Price is not a boolean`)
+          }
           typeShoe.innerHTML = element.tipo;
           if (element.fabricacion.año !== undefined) {
               yearFabrication.innerHTML = element.fabricacion.año.toString();

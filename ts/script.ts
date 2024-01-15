@@ -1,35 +1,22 @@
 const shoes_container = document.querySelector("#shoes_container");
-
-
-interface Shoe {
-  marca: string;
-  precio: number;
-  tipo: string;
-  imagen: string;
-  fabricacion: Fabrication;
-  hola : string
-}[]
-
-interface Fabrication {
-  año: boolean;
-  lugar: string;
-}
+import { Shoe } from "./interfaces/Shoes";
 
 async function allShoes() {
   try {
-      const response = await fetch("./shoes.json");
+      const response = await fetch("../shoes.json");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      const data: Shoe[] = await response.json();
+      const data = await response.json();
       data.forEach((element:Shoe) => {
-          const containerShoe = document.createElement("div");
-          const imageShoe = document.createElement("img");
-          const brandShoe = document.createElement("p");
-          const typeShoe = document.createElement("p");
-          const priceShoe = document.createElement("p");
-          const yearFabrication = document.createElement("p");
-          const placeFabrication = document.createElement("p");
+        console.log(element)
+          const containerShoe:HTMLDivElement = document.createElement("div");
+          const imageShoe:HTMLImageElement = document.createElement("img");
+          const brandShoe:HTMLParagraphElement = document.createElement("p");
+          const typeShoe:HTMLParagraphElement = document.createElement("p");
+          const priceShoe:HTMLParagraphElement = document.createElement("p");
+          const yearFabrication:HTMLParagraphElement = document.createElement("p");
+          const placeFabrication:HTMLParagraphElement = document.createElement("p");
 
           imageShoe.src = element.imagen;
           brandShoe.innerHTML = element.marca;

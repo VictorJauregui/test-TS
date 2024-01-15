@@ -35,7 +35,8 @@
       "tipo": "Running",
       "imagen": "https://imgs.search.brave.com/uGUpTafDiLAPEQkVXLPPQvdw9LoyEiljbpKSrof_vII/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Y2LzM4/LzM1L2Y2MzgzNTE3/ZjViMzcwYTY3OTU4/YjQ0ZjI4MjAyNWRl/LmpwZw",
       "fabricacion": {
-          "lugar": "Estados Unidos"
+        "año": 2021,
+        "lugar": "Estados Unidos"
       }
   },
   {

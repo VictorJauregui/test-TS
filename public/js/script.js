@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -9,16 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const shoes_container = document.querySelector("#shoes_container");
-[];
 function allShoes() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield fetch("./shoes.json");
+            const response = yield fetch("../shoes.json");
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = yield response.json();
             data.forEach((element) => {
+                console.log(element);
                 const containerShoe = document.createElement("div");
                 const imageShoe = document.createElement("img");
                 const brandShoe = document.createElement("p");
@@ -56,3 +55,5 @@ function allShoes() {
     });
 }
 allShoes();
+export {};
+//# sourceMappingURL=script.js.map
